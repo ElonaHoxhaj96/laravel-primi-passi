@@ -24,4 +24,15 @@ Route::get('/', function () {
     // ];
 
     return view('home', compact('title', 'subtitle'));
-});
+})->name('home');
+
+//ABOUT US
+Route::get('/about', function(){
+    return view('about');
+})->name('about');
+
+//CONTACT US
+Route::get('/contact', function(){
+    return view('contact');
+})->name('contact');
+
