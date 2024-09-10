@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('home');
+    $title = 'Questa è la mia prima pagina con Laravel';
+    $subtitle = 'Speriamo bene';
+
+    $data = [
+        'title' => $title,
+        'subtitle' => $subtitle
+    ];
+
+    return view('home', $data);
 });
