@@ -18,10 +18,10 @@ Route::get('/', function () {
     $title = 'Questa è la mia prima pagina con Laravel';
     $subtitle = 'Speriamo bene';
 
-    $data = [
-        'title' => $title,
-        'subtitle' => $subtitle
-    ];
+    // $data = [
+    //     'title' => $title,
+    //     'subtitle' => $subtitle
+    // ];
 
-    return view('home', $data);
+    return view('home', compact('title', 'subtitle'));
 });
